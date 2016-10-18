@@ -17,7 +17,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.google.lk/*"],
-      "js": ["content_script.js"]
+      "css": ["bootstrap.min.css,chatbot.css"],
+      "js": ["content_script.js","jquery.min.js","bootstrap.min.js","chat_scripts.js"]
     }
   ],
   "permissions": ["tabs", "storage"]
