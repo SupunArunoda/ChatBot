@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Chat Bot",
+  "version": "0.0.1",
+
+  "description": "A bot can reply message on messages",
+
+  "page_action": {
+    "default_title": "Chrome Chat Bot",
+    "default_popup": "messages_chat_widget.html"
+  },
+
+  "background": {
+    "scripts": ["event_page.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.lk/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "permissions": ["tabs", "storage"]
+}
